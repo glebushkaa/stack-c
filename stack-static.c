@@ -3,9 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-Stack emptyStack() { 
-    return (Stack) { 0 };
-}
+Stack emptyStack() { return (Stack){0}; }
 
 int pop(Stack* stack) {
     if (stack->size <= 0) {
@@ -16,7 +14,7 @@ int pop(Stack* stack) {
     return value;
 }
 void push(Stack* stack, int value) {
-    if(stack->size >= MAX_STACK_SIZE) {
+    if (stack->size >= MAX_STACK_SIZE) {
         exit(OVERFLOW_VALUE);
     }
     stack->arr[stack->size] = value;
