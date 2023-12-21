@@ -3,7 +3,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-Stack emptyStack() { return (Stack){0}; }
+Stack emptyStack() { 
+    return (Stack){0};
+}
 
 int pop(Stack* stack) {
     if (stack->size <= 0) {
